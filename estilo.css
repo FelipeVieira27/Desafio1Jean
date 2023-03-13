@@ -1,0 +1,15 @@
+body{
+    margin:auto 100px;
+    margin-top: 28px;
+}
+.links{
+    display:flex ;
+    justify-content: right;
+    border:2px red solid}
+.capa{
+    display: flex;
+    justify-content: center;
+}
+h4{
+    text-align: center;
+}
