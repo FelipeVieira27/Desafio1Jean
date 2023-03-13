@@ -2,10 +2,10 @@ body{
     margin:auto 100px;
     margin-top: 28px;
 }
-.links{
-    display:flex ;
-    justify-content: right;
-    border:2px red solid}
+a{
+    float: right;
+    padding: top 25px;
+}
 .capa{
     display: flex;
     justify-content: center;
