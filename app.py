@@ -2,13 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-
 @app.route("/")
-def index():
-    titulo = "Index"
-    return render_template ("index.html", title = titulo)
-
-@app.route("/home.html")
 def home():
     titulo = "Home"
     return render_template ("home.html", title = titulo)
