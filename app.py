@@ -5,16 +5,20 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template ("index.html")
+    titulo = "Index"
+    return render_template ("index.html", title = titulo)
 
-@app.route("/home")
+@app.route("/home.html")
 def home():
-    return render_template ("home.html")
+    titulo = "Home"
+    return render_template ("home.html", title = titulo)
 
-@app.route("/quemsomos")
-def quem():
-    return render_template ("quemsomos.html")
+@app.route("/quemsomos.html")
+def quemsomos():
+    titulo = "Quem Somos"
+    return render_template ("quemsomos.html", title = titulo)
 
-@app.route("/contato")
+@app.route("/contato.html")
 def contato():
-    return render_template ("contato.html")
+    titulo = "Contato"
+    return render_template ("contato.html", title = titulo)

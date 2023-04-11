@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    
-    <head>
-        <title> Quem somos </title>
-        <link rel="stylesheet" href="estilo.css">
-    </head>
-    <body style="background-image: url(imagens/fundo2.png);">
-        <div>
-            <img src="imagens/logo.png" alt="logo">
-        <a href="contato.html"> Contato |</a>
-        <a href=""> Quem somos |</a>
-        <a href="home.html"> Home |</a>
-        </div>
+{% extends "base.html" %}
+{% block abacate %}
         <div>
         <h2 >Quem Somos</h2>
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia reiciendis nobis cum magni dolorem dolorum quod cumque iusto aut nam excepturi neque rerum soluta obcaecati, quis, architecto delectus qui. Dolorum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem at commodi sit neque, sequi eveniet voluptas maxime doloremque repudiandae, fuga veniam obcaecati quasi consequuntur libero aliquid minima iste eum. Nihil.</p>
@@ -32,7 +20,6 @@
         <div>
             <h4> Todos os direitos reservados </h4>
         </div>
-        
-
+{% endblock %}
     </body>
 </html>
