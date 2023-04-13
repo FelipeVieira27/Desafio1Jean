@@ -2,14 +2,21 @@
     margin:auto 100px;
     margin-top: 28px;
 }
-a{
+
+.link{
     float: right;
-    padding: top 25px;
+    padding-top: 25px;
 }
+
+.local{
+    font-size: large;
+}
+
 .capa{
     display: flex;
     justify-content: center;
 }
-h4{
+
+.direitos{
     text-align: center;
 }

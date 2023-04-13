@@ -1,4 +1,17 @@
 {% extends "base.html" %}
+{% block back %}
+    <body class="margem", style="background-image: url(/static/imagens/fundo2.png);">
+{% endblock %}
+{% block header%}
+        <div>
+            <img src="/static/imagens/logo.png" alt="logo">
+            <div class="link">
+                <a href="/"> Home </a> |
+                <a href=""> Quem somos </a> |
+                <a href="/contato"> Contato </a> |
+            </div>
+        </div>
+{% endblock %}
 {% block content %}
         <div>
         <h2 >Quem Somos</h2>
@@ -17,9 +30,5 @@
             <h2>Objetivos</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias voluptas tempora, facere aliquam ullam labore porro commodi, possimus nobis explicabo officiis beatae sint sunt dolorum quos, error exercitationem. Tempore, voluptatem! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque quae eum, tenetur voluptatem vitae magni accusamus nam molestias odit voluptatum consequatur veniam inventore, ratione expedita error non omnis facilis maxime.</p>
         </div>
-        <div>
-            <h4> Todos os direitos reservados </h4>
-        </div>
-{% endblock %}
     </body>
-</html>
+{% endblock %}
