@@ -2,31 +2,22 @@
 {% block back %}
     <body class="margem", style="background-image: url(/static/imagens/fundo2.png);">
 {% endblock %}
-{% block header%}
-        <div>
-            <img src="/static/imagens/logo.png" alt="logo">
-            <div class="link">
-                <a href="/"> Home </a> |
-                <a href="/quemsomos"> Quem somos </a> |
-                <a href=""> Contato </a> |
-            </div>
-        </div>
-{% endblock %}
+
 {% block content %}
 
         <div>
             <h2> Entre em contato</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quod harum sequi voluptatem consectetur temporibus? Nobis dolorem quis libero alias a recusandae minus rerum labore consequatur quia iste, doloribus soluta?</p>
             <hr>
-            <form>
+            <form action = "/contato" method="post">
                 Seu e-mail:
-                <br> <input type="email"; name="e-mail"></br>
+                <br> <input  type="email"; name="email" placeholder="Insira seu e-mail"></br>
                 Assunto:
-                <br> <input type="text"; name="Assunto"></br>
+                <br> <input  type="text"; name="assunto" placeholder="Insira o assunto"></br>
                 Descrição:
-                <br> <input type="text"; name="Descrição"></br>
-                <p> </p>
-                <input type="submit"; value="Enviar">
+                <br> <textarea  type="text"; name="descricao" placeholder="Descreva o assunto"></textarea>
+                <br></br>
+                <input class="forms"; type="submit"; value="Enviar">
             </form>
         </div>
     </body>
