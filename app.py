@@ -1,12 +1,6 @@
 from flask import Flask, request, render_template,  url_for
 from flask_mysqldb import MySQL
 
-def create_app():
-    from app import routes
-    routes.init_app(app)
-
-    return app
-
 app = Flask(__name__)
 
 app.config['MYSQL_Host'] = '127.0.0.1'
@@ -45,6 +39,15 @@ def contato_enviado():
         return "Formulário enviado com sucesso!"
     titulo = "Contatos"
     return render_template ("contato.html", title = titulo)
+
+
+@app.route("/users")
+def users():
+    cur = mysql.connection.cursor()
+    users = cur.execute("SELECT * FROM contatos")
+    if users > 0:
+        userDetails = cur.fetchall()
+        return render_template("users.html", userDetails=userDetails)
 
 
 if __name__ == '__main__':

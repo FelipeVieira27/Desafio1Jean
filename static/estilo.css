@@ -8,6 +8,10 @@
     padding-top: 25px;
 }
 
+.link a:hover{
+    font-size: 105%;
+}
+
 .local{
     font-size: large;
 }
@@ -23,4 +27,8 @@
 
 .forms{
     margin: 0,5%;
+}
+
+thead {
+    background-color: #d3d3d3;
 }

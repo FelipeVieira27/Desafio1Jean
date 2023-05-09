@@ -1,0 +1,52 @@
+{% extends "base.html"%}
+{% block back %}
+<body class="margem", style="background-image: url(/static/imagens/fundo2.png);">
+{% endblock %}
+{% block content %}
+
+<h3> Estes são os comentários enviados:</h3>
+<table border="1px" >
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>E-mail do usuário</th>
+            <th>Assunto</th>
+            <th>Descrição</th>
+            <th>Horário do envio</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for x in userDetails %}
+        <tr>
+            <td>{{x[0]}}</td>
+            <td>{{x[1]}}</td>
+            <td>{{x[2]}}</td>
+            <td>{{x[3]}}</td>
+            <td>{{x[4]}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</body>
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#users').DataTable({
+            'language': {
+                'lengthMenu': 'Mostrando_MENU_registros por página',
+                'zeroRecords': 'Nada encontrado',
+                'info': 'Mostrando página_PAGE_de_PAGES',
+                'infoEmpty': 'Nenhum registro disponível',
+                'infoFiltered': '(filtrado de _MAX_ registros no total)'
+            }
+        })
+    })
+</script>
+{% endblock %}
