@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 app.config['MYSQL_Host'] = '127.0.0.1'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = '1234'
+app.config['MYSQL_PASSWORD'] = '12345'
 app.config['MYSQL_DB'] = 'unes'
 
 mysql = MySQL(app)
@@ -33,10 +33,11 @@ def contato_enviado():
         cur.execute("INSERT INTO contatos(email, assunto, descricao) VALUES(%s, %s, %s)", (email, assunto, descricao))
 
         mysql.connection.commit()
-
+        users = cur.execute("SELECT * FROM contatos")
+        userDetails = cur.fetchall()
         cur.close()
-
-        return "Formulário enviado com sucesso!"
+        titulo = "Users"
+        return render_template("users.html", title = titulo, userDetails=userDetails)
     titulo = "Contatos"
     return render_template ("contato.html", title = titulo)
 
@@ -45,9 +46,10 @@ def contato_enviado():
 def users():
     cur = mysql.connection.cursor()
     users = cur.execute("SELECT * FROM contatos")
+    titulo = "Users"
     if users > 0:
         userDetails = cur.fetchall()
-        return render_template("users.html", userDetails=userDetails)
+        return render_template("users.html", titulo = titulo, userDetails=userDetails)
 
 
 if __name__ == '__main__':

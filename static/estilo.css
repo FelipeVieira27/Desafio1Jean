@@ -1,15 +1,28 @@
-.margem{
-    margin:auto 100px;
-    margin-top: 28px;
+.nav{
+    padding: 2%;
+    border-top: 5px solid rgb(84, 34, 84);
+    align-items: center;
 }
 
 .link{
     float: right;
-    padding-top: 25px;
+    padding-top: 1%;
 }
 
+.link a{
+    text-decoration: none;
+    color: black;
+}
 .link a:hover{
-    font-size: 105%;
+    text-decoration: double;
+}
+@media (max-width: 600px){
+    .link a{
+        font-size: 75%;
+    }
+    .capa img{
+        width: 70%;
+    }
 }
 
 .local{
@@ -19,7 +32,14 @@
 .capa{
     display: flex;
     justify-content: center;
+    margin-top: 1%;
+    background-color: #d3d3d3;
 }
+
+.descricao {
+    margin: 4%;
+}
+
 
 .direitos{
     text-align: center;
@@ -31,4 +51,22 @@
 
 thead {
     background-color: #d3d3d3;
+}
+
+table{
+    justify-content: center;
+    margin: auto;
+}
+
+@media (max-width: 600px){
+    table{
+        width: 75%;
+
+    }
+    td{
+        width: 75%;
+    }
+    .descricao{
+        font-size: 75%;
+    }
 }

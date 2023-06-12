@@ -1,14 +1,9 @@
 {% extends "base.html" %}
-{% block back %}
-    <body class="margem", style="background-image: url(/static/imagens/fundo.png);">
-{% endblock %}
-
 {% block content %}
-<p></p>
         <div class="capa">
-            <img src="/static/imagens/capa.png" alt="capa">
+            <img srcset="../static/imagens/capa.png 250w, ../static/imagens/capa.png 125w" sizes="(max-width: 700px) 125px, 250px" alt="">
         </div>
-        <div>
+        <div class="descricao">
             <h3>Sobre a Universidade </h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos commodi ad sapiente aut iusto totam recusandae. Similique cumque quisquam, dicta nisi corrupti officiis ut, sint officia eum eos error expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, nulla. Exercitationem cupiditate placeat quasi natus facere sequi fuga fugiat non, qui, eligendi autem itaque nesciunt eos expedita vitae dicta dolorum! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt incidunt, porro iure error similique nihil. Nihil libero quos perspiciatis nisi dolorum? Vel, provident! Hic, non! Nihil perferendis porro qui consequatur.
             </p>

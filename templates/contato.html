@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 {% block back %}
-    <body class="margem", style="background-image: url(/static/imagens/fundo2.png);">
+    <body>
 {% endblock %}
 
 {% block content %}
 
-        <div>
+        <div class="descricao">
             <h2> Entre em contato</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quod harum sequi voluptatem consectetur temporibus? Nobis dolorem quis libero alias a recusandae minus rerum labore consequatur quia iste, doloribus soluta?</p>
-            <hr>
             <form action = "/contato" method="post">
                 Seu e-mail:
                 <br> <input  type="email"; name="email" placeholder="Insira seu e-mail"></br>
